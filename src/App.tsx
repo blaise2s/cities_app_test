@@ -52,7 +52,7 @@ export const App = (): JSX.Element => {
 
   return (
     <div className={styles.root}>
-      <Search value={target} onSearch={handleSearch}/>
+      <Search onSearch={handleSearch} debounceTime={250}/>
       <div className={styles.cities}>
         <Cities cityData={cityData(target)}/>
       </div>
